@@ -5,6 +5,7 @@ CMD ["bash"]
 FROM base AS test-and-build
 COPY . /workspace
 WORKDIR /workspace
+RUN chmod +x gradlew
 RUN ./gradlew build
 
 #production
