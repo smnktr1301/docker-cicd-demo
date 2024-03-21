@@ -6,9 +6,9 @@ FROM base AS test-and-build
 COPY . /workspace
 WORKDIR /workspace
 ARG REACT_APP_API_SERVER
-RUN nmp ci
-RUN nmp run test
-RUN nmp run build
+RUN npm ci
+RUN npm run test
+RUN npm run build
 
 # Hosting in nginx
 FROM nginx:latest AS production
